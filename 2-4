@@ -1,0 +1,24 @@
+
+//자바스크립트로 html수정한다.document.getElementById("title") 바뀜 !  
+//document.querySelector("#title"
+ 
+//자바스크립트는 html과 css수정가능하다. (이벤트에 반응하기 위한 기능임
+//이벤트는 Resize, Click, Submit,Input, Change, Load, Before, Closing, Printing 등을 의미
+
+document.getElementById("title") // => 타이틀 바뀜 덮어씌움.
+document.querySelector(#title);
+function HandleRise() {
+   console.log("I have been resized")
+                       }
+ window.addEventListener("resize", handleResize);  //handleResize뒤에 ()를 붙이지 않음. ()붙은경우 함수호출.
+ 
+ ----------------------------------------------------------
+ const title = document.querySelector("#title");
+
+function handleClick() {
+  title.style.color = "red";
+}
+
+title.addEventListener("click", handleClick);  
+ // 타이틀 클릭시 red로 변환.
+        
