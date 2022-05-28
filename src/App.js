@@ -22,7 +22,7 @@ function App() {
       <div className="black-nav">
         <h4> {logo}</h4>
       </div>
-      <button onClick = { }> 글수정 </button>
+      <button onClick={() => {}}> 글수정 </button>
       <div className="list">
         <h4>
           {글제목[0]}
@@ -45,8 +45,18 @@ function App() {
         <h4>{글제목[2]}</h4>
         <p>{date}</p>
       </div>
+      <Modal></Modal>
     </div>
   );
 }
-
 export default App;
+
+function Modal() {
+  return (
+    <div className="modal">
+      <h4>제목</h4>
+      <p>날짜</p>
+      <p>상세내용</p>
+    </div>
+  );
+}
