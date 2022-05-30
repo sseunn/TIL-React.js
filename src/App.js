@@ -13,6 +13,7 @@ function App() {
   let [logo, setLogo] = useState("React Blog");
   let [date, setDate] = useState("2월 17일 발행");
   let [따봉, 따봉변경] = useState(0);
+  let [modal, setModal] = useState(false);
   function 함수() {
     console.log(1);
   }
@@ -38,17 +39,24 @@ function App() {
         <p>{date}</p>
       </div>
       <div className="list">
-        <h4>{글제목[1]}</h4>
+        <h4
+          onClick={() => {
+            setModal(!modal);
+          }}
+        >
+          {글제목[1]}
+        </h4>
         <p>{date}</p>
       </div>
       <div className="list">
         <h4>{글제목[2]}</h4>
         <p>{date}</p>
       </div>
-      <Modal></Modal>
+      {modal == true ? <Modal /> : null}
     </div>
   );
 }
+
 export default App;
 
 function Modal() {
